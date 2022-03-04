@@ -11,7 +11,7 @@ class Carro{
        console.log("Cor..........: " + this.cor)
        console.log("Marca..........: " + this.marca)
        console.log("Modelo..........: " + this.cor)
-       console.log("Ligado..........: " + (this.ligado ? "SIM" : "NÃO"));
+       console.log("Ligado..........: " + (this.ligado ? "Sim" : "Não"));
        console.log("KM..........: " + this.km)
        console.log("Combustível..........: " + this.comb)
     }
@@ -21,8 +21,16 @@ class Carro{
     desligar(){
         this.ligado = false;
     }
-    abastecer(litros){
-        this.comb += litros;
+    set setComb(v){
+        if(v < 0 || v > 100){
+            console.log("valor inválido, digite outro");
+        } else {
+            this.comb = v;
+            console.log(`Combustível alterado, valor atual: ${this.comb}L`);
+        }
+    }
+    get getComb(){
+        return this.comb;
     }
     verificarComb(){
         if(this.comb <= 10){
@@ -33,9 +41,8 @@ class Carro{
     }
 }
 const c1 = new Carro("Vermelho", "VW", "Fox")
-c1.info()
-c1.ligar()
-c1.info()
-c1.abastecer(50)
+
+c1.setComb = 40
+console.log(c1.getComb)
 c1.info();
 c1.verificarComb()
