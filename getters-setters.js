@@ -14,7 +14,6 @@ class User {
         }
         this._password = value;
     }
-
     get password(){
         return '*'.repeat(this._password.length);
     }
@@ -22,7 +21,6 @@ class User {
 const newUser = new User()
 newUser.name = 'Erick'
 newUser.password = '123456'
-
 console.log(newUser.name)
 //Erick
 console.log(newUser.password)
