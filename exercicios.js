@@ -44,19 +44,18 @@ class Volume{
         return this.raio;
     }
     set setAltura(novaAltura){
-        this.raio = novaAltura;
+        this.altura = novaAltura;
     }
     get getAltura(){
         return this.altura;
     }
 }
 const cilindro1 = new Volume(10,20);
-console.log(cilindro1)
-cilindro1.setRaio = 30
-console.log(cilindro1)
+cilindro1.setRaio = 10
 cilindro1.setAltura = 50;
-console.log(cilindro1)
+console.log(`Valor da Altura: ${cilindro1.getAltura}`)
+console.log(`Valor do Raio: ${cilindro1.getRaio}`)
 
 cilindro1.calcular()
 //O volume do cilindro é 157000m³
-console.log(cilindro1.getAltura)
+
