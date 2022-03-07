@@ -17,11 +17,10 @@ const Corpos = new Distancia(1500, 2910)
 Corpos.calcular()
 //A distância entre os dois corpos é de 1410m.
 
-
+//---------------------------------------------------------
 //Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes. Go to the editor
 //Volume of a cylinder : V = πr2h
 //where r is the radius and h is the height of the cylinder.
-
 class Volume{
     //static pi = 3.14;
     constructor(r, h){
@@ -59,3 +58,19 @@ console.log(`Valor do Raio: ${cilindro1.getRaio}`)
 cilindro1.calcular()
 //O volume do cilindro é 157000m³
 
+//---------------------------------------------------------
+//Calculadora de multilplicação
+class CalculadoraMultiplicacao{
+    constructor(_value,_length){
+        this.value = _value;
+        this.length = _length;
+    }
+    multiplicar(){
+        for(let i = 1; i <= this.length; i++){
+            console.log(`${this.value} x ${i} = ${this.value*i}`);
+        }
+    }
+}
+const num1 = new CalculadoraMultiplicacao(5,20);
+
+num1.multiplicar()
