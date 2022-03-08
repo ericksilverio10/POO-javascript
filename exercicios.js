@@ -14,7 +14,7 @@ class Distancia {
 
 const Corpos = new Distancia(1500, 2910)
 
-Corpos.calcular()
+//Corpos.calcular()
 //A distância entre os dois corpos é de 1410m.
 
 //---------------------------------------------------------

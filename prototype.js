@@ -80,10 +80,13 @@ class CarroTransporte extends Carro{
     constructor(){
         super(2,1)
     }
-}
+}   
+Carro.prototype.potencia = 500;
+Carro.prototype.velocidade = 0;
+Carro.prototype.velMax = 0;
+
 const c1 = new CarroCombate(5000)
 const c2 = new CarroTransporte()
 
 c1.info();
 c2.info();
-
